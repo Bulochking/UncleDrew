@@ -1,0 +1,238 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Lato", sans-serif; //
+}
+
+@mixin font($font-size, $font-weight, $line-height, $color, $letter-spacing: normal) {
+	font-size: $font-size;
+	line-height: $line-height;
+	font-weight: $font-weight;
+	color: $color;
+	letter-spacing: $letter-spacing;
+}
+
+
+.button {
+	@include font(16px, 400, calc(16px * 1.5), #fff, 0.16px);
+	background-color: #3FB8AD;
+	padding: 17.5px 10px;
+	max-width: 254px;
+	width: 100%;
+	text-transform: uppercase;
+	border-radius: 16px;
+	border: 2px solid transparent;
+	transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+	transform: scale(1.05);
+
+}
+
+.button:active {
+	transform: scale(1);
+	box-shadow: 1px 1px 10px #3FB8AD;
+
+}
+
+.logo {
+
+}
+
+.icon {
+
+}
+
+.nav {
+	&__items {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		column-gap: 48px;
+	}
+
+	&__item {
+		list-style-type: none;
+
+	}
+
+	&__link {
+		@include font(16px, 400, calc(16px * 1.5), #fff, 0.16px);
+		text-decoration: none;
+		list-style-type: none;
+		text-transform: uppercase;
+		display: block;
+		border-bottom: 2px solid transparent;
+		min-width: 83px;
+		text-align: center;
+		transition: transform 0.3s ease, color 0.3s ease;
+		}
+
+	&__link:hover {
+		border-bottom: 2px solid #3E8982;
+	}
+
+	&__link:active {
+		color: #3FB8AD;
+	}
+
+	&.active .icon {
+		color: #3FB8AD;
+	}
+}
+
+
+.pop-up {
+	position: absolute;
+	top: -50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	text-align: center;
+	max-width: 640px;
+	width: 100%;
+	border-radius: 24px;
+	padding-top: 36px;
+	transition: top .3s linear;
+	background-color: #fff;
+
+	&__container {
+		margin: 0 auto;
+		max-width: 560px;
+		padding: 0 16px;
+	}
+
+	&__title {
+		@include font(35px, 400, 44px, #000);
+		font-family: "Forum", serif; 
+		margin-bottom: 40px;
+	}
+
+	&__inputs {
+		margin-bottom: 40px;
+	}
+
+	&__input {
+		@include font(18px, 400, 22px, rgba(0, 0, 0, 0.48));
+		outline: none;
+		border: 1px solid rgba(0, 0, 0, 0.16);
+		border-radius: 16px;
+		margin-bottom: 20px;
+
+	}
+
+	&__input:last-child {
+		margin-bottom: 0;
+	}
+
+	&__buttons:last-child {
+		margin-bottom: 0px;
+	}
+
+	.button {
+		margin-bottom: 20px;
+	}
+}
+
+.pop-up-active {
+
+	.banner {
+		&::after {
+			background-color: rgba($color: #000, $alpha: 0.48);
+		}
+	}
+
+	.pop-up {
+		top: 50%;
+	}
+}
+
+.container {
+	padding: 80px 150px 250px
+}
+
+.banner {
+	position: relative;
+	background: url(../media/barber-topor.jpg) center/cover no-repeat;
+	margin-bottom: 98px;
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 241px;
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		justify-content: space-between;
+	}
+
+	&__icon-wrapper {
+		width: 59px;
+		height: 59px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__section {
+		align-self: end;
+		justify-self: start;
+
+	}
+
+	&__title {
+		@include font(70px, 400, calc(70px * 1), #fff);
+		font-family: "Forum", serif; 
+		text-transform: uppercase;
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		max-width: 783px;
+		margin-bottom: 36px;
+	}
+
+	&__text {
+		@include font(18px, 400, calc(18px * 1.3), #fff, 0.72px);
+		margin-bottom: 68px;
+		max-width: 536px;
+	}
+
+	&__info-boxes {
+		align-self: end;
+		justify-self: end;
+	}
+
+	&__info-box {
+		background: rgba(255, 255, 255, 0.1);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(20px);
+		border-radius: 16px;
+		width: 280px;
+		height: 280px;
+		padding: 77px 25px 40px 37px;
+		margin-bottom: 42px;
+	}
+
+	&__info-box:last-child {
+		margin-bottom: 0px;
+	}
+
+	&__span {
+		background-color: #3E8982;
+		font-family: "Forum", serif;
+		padding: 0 7px;
+	}
+}
+
+.box-title {
+	@include font(35px, 400, calc(35px * 1), #fff);
+	font-family: "Forum", serif;
+	margin-bottom: 16px;
+}
+
+.box-text {
+	@include font(18px, 400, calc(18px * 1.5), #fff, 0.18px);
+}

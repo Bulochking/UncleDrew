@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+.button {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 0.16px;
+  background-color: #3FB8AD;
+  padding: 17.5px 10px;
+  max-width: 254px;
+  width: 100%;
+  text-transform: uppercase;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.button:active {
+  transform: scale(1);
+  box-shadow: 1px 1px 10px #3FB8AD;
+}
+
+.nav__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 48px;
+       column-gap: 48px;
+}
+.nav__item {
+  list-style-type: none;
+}
+.nav__link {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 0.16px;
+  text-decoration: none;
+  list-style-type: none;
+  text-transform: uppercase;
+  display: block;
+  border-bottom: 2px solid transparent;
+  min-width: 83px;
+  text-align: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.nav__link:hover {
+  border-bottom: 2px solid #3E8982;
+}
+.nav__link:active {
+  color: #3FB8AD;
+}
+.nav.active .icon {
+  color: #3FB8AD;
+}
+
+.pop-up {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  max-width: 640px;
+  width: 100%;
+  border-radius: 24px;
+  padding-top: 36px;
+  transition: top 0.3s linear;
+  background-color: #fff;
+}
+.pop-up__container {
+  margin: 0 auto;
+  max-width: 560px;
+  padding: 0 16px;
+}
+.pop-up__title {
+  font-size: 35px;
+  line-height: 44px;
+  font-weight: 400;
+  color: #000;
+  letter-spacing: normal;
+  font-family: "Forum", serif;
+  margin-bottom: 40px;
+}
+.pop-up__inputs {
+  margin-bottom: 40px;
+}
+.pop-up__input {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.48);
+  letter-spacing: normal;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+.pop-up__input:last-child {
+  margin-bottom: 0;
+}
+.pop-up__buttons:last-child {
+  margin-bottom: 0px;
+}
+.pop-up .button {
+  margin-bottom: 20px;
+}
+
+.pop-up-active .banner::after {
+  background-color: rgba(0, 0, 0, 0.48);
+}
+.pop-up-active .pop-up {
+  top: 50%;
+}
+
+.container {
+  padding: 80px 150px 250px;
+}
+
+.banner {
+  position: relative;
+  background: url(../media/barber-topor.jpg) center/cover no-repeat;
+  margin-bottom: 98px;
+}
+.banner__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 241px;
+}
+.banner__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+.banner__icon-wrapper {
+  width: 59px;
+  height: 59px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner__section {
+  align-self: end;
+  justify-self: start;
+}
+.banner__title {
+  font-size: 70px;
+  line-height: 70px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: normal;
+  font-family: "Forum", serif;
+  text-transform: uppercase;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  max-width: 783px;
+  margin-bottom: 36px;
+}
+.banner__text {
+  font-size: 18px;
+  line-height: 23.4px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 0.72px;
+  margin-bottom: 68px;
+  max-width: 536px;
+}
+.banner__info-boxes {
+  align-self: end;
+  justify-self: end;
+}
+.banner__info-box {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 16px;
+  width: 280px;
+  height: 280px;
+  padding: 77px 25px 40px 37px;
+  margin-bottom: 42px;
+}
+.banner__info-box:last-child {
+  margin-bottom: 0px;
+}
+.banner__span {
+  background-color: #3E8982;
+  font-family: "Forum", serif;
+  padding: 0 7px;
+}
+
+.box-title {
+  font-size: 35px;
+  line-height: 35px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: normal;
+  font-family: "Forum", serif;
+  margin-bottom: 16px;
+}
+
+.box-text {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 0.18px;
+}/*# sourceMappingURL=styles.css.map */
