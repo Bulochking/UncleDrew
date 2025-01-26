@@ -2,7 +2,11 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Lato", sans-serif; //
+	font-family: "Lato", sans-serif;
+}
+
+path {
+	transition: fill .3s ease;
 }
 
 @mixin font($font-size, $font-weight, $line-height, $color, $letter-spacing: normal) {
@@ -12,7 +16,6 @@
 	color: $color;
 	letter-spacing: $letter-spacing;
 }
-
 
 .button {
 	@include font(16px, 400, calc(16px * 1.5), #fff, 0.16px);
@@ -24,6 +27,7 @@
 	border-radius: 16px;
 	border: 2px solid transparent;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	cursor: pointer;
 }
 
 .button-empty {
@@ -80,10 +84,6 @@
 
 	&__link:active {
 		color: #3FB8AD;
-	}
-
-	&.active .icon path {
-		fill: #3FB8AD;
 	}
 }
 
@@ -195,6 +195,13 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+	}
+
+	&__icon-wrapper.active path {
+		fill: #3FB8AD;
 	}
 
 	&__section {

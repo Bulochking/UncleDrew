@@ -5,6 +5,10 @@
   font-family: "Lato", sans-serif;
 }
 
+path {
+  transition: fill 0.3s ease;
+}
+
 .button {
   font-size: 16px;
   line-height: 24px;
@@ -19,6 +23,7 @@
   border-radius: 16px;
   border: 2px solid transparent;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .button-empty {
@@ -70,9 +75,6 @@
 }
 .nav__link:active {
   color: #3FB8AD;
-}
-.nav.active .icon path {
-  fill: #3FB8AD;
 }
 
 .pop-up {
@@ -185,6 +187,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.banner__icon-wrapper.active path {
+  fill: #3FB8AD;
 }
 .banner__section {
   align-self: end;
