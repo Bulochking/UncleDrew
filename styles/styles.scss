@@ -23,22 +23,27 @@
 	text-transform: uppercase;
 	border-radius: 16px;
 	border: 2px solid transparent;
-	transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-empty {
+	border: 2px solid #3FB8AD;
+	background-color: transparent;
+	color: #3FB8AD;
 }
 
 .button:hover {
 	transform: scale(1.05);
-
+	
 }
 
 .button:active {
 	transform: scale(1);
 	box-shadow: 1px 1px 10px #3FB8AD;
-
 }
 
 .logo {
-
+	display: flex;
 }
 
 .icon {
@@ -55,7 +60,6 @@
 
 	&__item {
 		list-style-type: none;
-
 	}
 
 	&__link {
@@ -78,8 +82,8 @@
 		color: #3FB8AD;
 	}
 
-	&.active .icon {
-		color: #3FB8AD;
+	&.active .icon path {
+		fill: #3FB8AD;
 	}
 }
 
@@ -87,6 +91,7 @@
 .pop-up {
 	position: absolute;
 	top: -50%;
+	top: 50%; //убрать когда получится понять в чем ошибка
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 2;
@@ -95,7 +100,7 @@
 	width: 100%;
 	border-radius: 24px;
 	padding-top: 36px;
-	transition: top .3s linear;
+	transition: top .3s ease;
 	background-color: #fff;
 
 	&__container {
@@ -119,32 +124,45 @@
 		outline: none;
 		border: 1px solid rgba(0, 0, 0, 0.16);
 		border-radius: 16px;
-		margin-bottom: 20px;
+		display: block;
+		margin: 0 auto 20px;
+		width: 100%;
+		padding: 24px 0 24px 24px;
+	}
 
+	&__input::placeholder {
+		@include font(18px, 400, 22px, rgba(0, 0, 0, 0.48));
 	}
 
 	&__input:last-child {
 		margin-bottom: 0;
 	}
 
-	&__buttons:last-child {
-		margin-bottom: 0px;
+	&__buttons {
+		margin: 0 auto;
 	}
 
 	.button {
-		margin-bottom: 20px;
+		margin: 0 auto 20px;
+		width: 100%;
+		max-width: 560px;
+	}
+
+	.button:last-child {
+		margin-bottom: 36px;
 	}
 }
 
 .pop-up-active {
-
 	.banner {
 		&::after {
+			transition: background-color .3s ease;
 			background-color: rgba($color: #000, $alpha: 0.48);
 		}
 	}
 
 	.pop-up {
+		transition: top .3s ease;
 		top: 50%;
 	}
 }
@@ -182,7 +200,6 @@
 	&__section {
 		align-self: end;
 		justify-self: start;
-
 	}
 
 	&__title {
